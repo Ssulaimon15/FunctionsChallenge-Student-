@@ -29,22 +29,23 @@ class ViewController: UIViewController {
             case 0:
                 //MARK: - MVP - Part II
          
+                displayMvp()
                 
                 
                 break
             case 1:
                 // TODO: - Stretch #1
-//                output1 = returnAString()
+                output1 = returnAString()
                 
                 myTextView.text = output1
             case 2:
                 // TODO: - Stretch #2
-//                output2 = createSentence(language: "Swift")
+               output2 = createSentence(language: "Swift")
                 
                 myTextView.text = output2
             case 3:
                 // TODO: - Stretch #3
-//                output3 = createFruitLovingSentence("apples", And: "bananas")
+                output3 = createFruitLovingSentence(fruit1: "apples", fruit2: "bananas")
                 
                 myTextView.text = output3
             case 4:
@@ -79,15 +80,23 @@ class ViewController: UIViewController {
     
     
     //MARK: - Stretch #1
-    
+    func returnAString() -> String {
+        return "Stretch #1 Complete."
+    }
     
     
     //MARK: - Stretch #2
-    
+    func createSentence(language: String) -> String {
+        let loveSwift = "I love programming with" + language + "."
+        return loveSwift
+    }
     
     
     //MARK: - Stretch #3
-    
+    func createFruitLovingSentence(fruit1: String, fruit2: String) -> String{
+        let loveFruit = "I love" + fruit1 + "and" + fruit2
+        return loveFruit
+    }
     
     
     //MARK: - Stretch #4
