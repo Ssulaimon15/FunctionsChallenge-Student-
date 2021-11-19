@@ -51,7 +51,7 @@ class ViewController: UIViewController {
             case 4:
                 let sentence = "Programming Rules"
                 // TODO: - Stretch #4
-//                output4 = "\(sentence), has \(countTheCharacters(sentence)) characters"
+                output4 = "\(sentence), has \(countTheCharacters(sentence: sentence)) characters"
                 
                 myTextView.text = output4
             case 5:
@@ -87,34 +87,30 @@ class ViewController: UIViewController {
     
     //MARK: - Stretch #2
     func createSentence(language: String) -> String {
-        let loveSwift = "I love programming with" + language + "."
+        let loveSwift = "I love programming with" + " " + language + "."
         return loveSwift
     }
     
     
     //MARK: - Stretch #3
     func createFruitLovingSentence(fruit1: String, fruit2: String) -> String{
-        let loveFruit = "I love" + fruit1 + "and" + fruit2
-        print(createFruitLovingSentence(fruit1: "apples",fruit2: "bananas"))
+        let loveFruit = "I love \(fruit1) and \(fruit2)"
         return loveFruit
     }
     
     
     //MARK: - Stretch #4
-    func countTheCharacters(string: String) -> Int {
-       print(string)
-        return string.count
+    func countTheCharacters(sentence: String) -> Int {
+        return sentence.count
         
     }
     
     
     //MARK: - Stretch #4
-    
-    
-    
+  
+    }
     //MARK: - Stretch #6
     
-    
-    
-}
+
+
 

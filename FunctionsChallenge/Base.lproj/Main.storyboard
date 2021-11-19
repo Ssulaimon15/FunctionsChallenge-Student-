@@ -30,6 +30,9 @@
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="0.0" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="fim-Kc-tmd">
                                         <rect key="frame" x="-2" y="47.5" width="398" height="31"/>
+                                        <connections>
+                                            <action selector="onSliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="DRj-9z-SYl"/>
+                                        </connections>
                                     </slider>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Inh-ag-Win">
                                         <rect key="frame" x="0.0" y="104.5" width="394" height="713.5"/>
