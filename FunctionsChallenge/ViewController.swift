@@ -95,15 +95,20 @@ class ViewController: UIViewController {
     //MARK: - Stretch #3
     func createFruitLovingSentence(fruit1: String, fruit2: String) -> String{
         let loveFruit = "I love" + fruit1 + "and" + fruit2
+        print(createFruitLovingSentence(fruit1: "apples",fruit2: "bananas"))
         return loveFruit
     }
     
     
     //MARK: - Stretch #4
+    func countTheCharacters(string: String) -> Int {
+       print(string)
+        return string.count
+        
+    }
     
     
-    
-    //MARK: - Stretch #5
+    //MARK: - Stretch #4
     
     
     
