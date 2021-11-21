@@ -57,8 +57,8 @@ class ViewController: UIViewController {
             case 5:
                 let sentence = "Here is my sentence"
                 // TODO: - Stretch #5
-//                let tuple = findVowelsConsonants(sentence)
-//                output5 = sentence + ", has:\n" + "Vowels:\(tuple.0) Consonants:\(tuple.1)"
+               let tuple = findVowelsConsonants(sentence)
+                output5 = sentence + ", has:\n" + "Vowels:\(tuple.0) Consonants:\(tuple.1)"
                 
                 myTextView.text =  output5
             default:
@@ -106,11 +106,46 @@ class ViewController: UIViewController {
     }
     
     
-    //MARK: - Stretch #4
+    //MARK: - Stretch #5
+    func findVowelsConsonants(_ sentence: String) -> (Int, Int) {
+        var vowels = 0
+        var consonants = 0
+        let lowerCaseSentence = sentence.lowercased()
+        for charater in lowerCaseSentence {
+            switch String(charater) {
+            case "a", "e", "i", "u", "o", "y":
+                vowels += 1
+            case "q", "w", "r", "t", "p", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m":
+                consonants += 1
+            default:
+                break
+            }
+        }
+        
+       return (vowels, consonants)
+    }
   
     }
     //MARK: - Stretch #6
     
-
-
+    func findVowelsConsonants(_ sentence: String) -> (Int, Int, Int) {
+        var vowels = 0
+        var consonants = 0
+        var other = 0
+        let lowerCaseSentence = sentence.lowercased()
+        for charater in lowerCaseSentence {
+            switch String(charater) {
+            case "a", "e", "i", "u", "o", "y":
+                vowels += 1
+            case "q", "w", "r", "t", "p", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m":
+                consonants += 1
+            case " ", "!", "@", "#","$","%","^","&","*","(",")",".",",","'","`":
+                other += 1
+            default:
+                other += 1
+        }
+    }
+    
+        return (vowels, consonants, other)
+}
 
